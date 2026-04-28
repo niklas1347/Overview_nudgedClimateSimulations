@@ -35,8 +35,8 @@ The simulations are created by Prof. Sebastian Sippel group at the University of
 
 #### Overview of the available variables:
 
-A variety of different atmospheric and land related variabels are saved at daily and monthly time scales. A full overview is provided in the Juptyer Notebook:
+A variety of different atmospheric and land related variabels are saved at daily and monthly time scales. A full overview is provided in the Juptyer Notebook: [Load_nudging_CESM2.ipynb](Load_nudging_CESM2.ipynb)
 
 #### Access the data:
 
-A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook:
+A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [Load_nudging_CESM2.ipynb](Load_nudging_CESM2.ipynb)
