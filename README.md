@@ -29,9 +29,9 @@ The simulations are created by the research group of Prof. Sebastian Sippel at t
 | Simulation | Appreviation | Description | Covered timeperiod | Ensemble members |
 | ------------- |-------------|-------------|-------------|-------------|
 | Historical | HIST | historical CO2 | 1940‑2024 | 1 |
-| Counterfactual <br> (Pre-industrial) | NAT | 1850 CO2 (282ppm) and aerosol levels | 1940‑2024 | 1 |
-| Counterfactual | THERM | Historical without CO2 fertilization | 1940‑2024 | 1 |
-| Counterfactual | PD | Costant present-day forcing | 1940‑2024 | 1 |
+| Pre-industrial | NAT | 1850 CO2 (282ppm) and aerosol levels | 1940‑2024 | 1 |
+|  | THERM | Historical without CO2 fertilization | 1940‑2024 | 1 |
+|  | PD | Costant present-day forcing | 1940‑2024 | 1 |
 
 #### Overview of the available variables:
 
