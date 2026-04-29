@@ -84,15 +84,16 @@ The simulations are created by the Alfred Wegener Institute, Helmholtz-Center fo
 #### Available simulations:
 | Simulation | Appreviation | Description | Covered timeperiod | Ensemble members |
 | ------------- |-------------|-------------|-------------|-------------|
-Weak Nudging
+| Weak Nudging |  |  |  |  |
 | Historical | Hist | 1950 boundary conditions | 2017‑2024 | 1 |
 | Pre-industrial | Cont | recorded boundary conditions | 2017‑2024 | 1 |
 | Long-Nudged | Cont | recorded boundary conditions | 2017‑2024 | 1 |
 |  | Tp2K | boundary conditions from a 2K warmer world | 2017‑2024 | 1 |
-Strong Nudging
+| Strong Nudging |  |  |  |  |
 | Historical | Hist | 1950 boundary conditions | 2017‑2024 | 1 |
 | Pre-industrial | Cont | recorded boundary conditions | 2017‑2024 | 1 |
 |  | Tp2K | boundary conditions from a 2K warmer world | 2017‑2024 | 1 |
+
 Note: The long-nudged run should not be taken as sixth ensemble member without rigorous testing.
 
 #### Overview of the available variables:
