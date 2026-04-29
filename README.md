@@ -13,13 +13,44 @@ The conceptual basis of this approach is discussed in [Shepherd (2016)](https://
 
 | Model | Type | Spatial Resolution | Nuding Method | Nuding dataset | SST | Experiments | Time period | Ensemble members | Data archive |
 | ------------- |-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|
-| CESM2 | fully-coupled | 0.9° lat x 1.25° lon | grid-point nudging | ERA5 | prescribed | HIST <br> NAT | 1940‑2024 <br> 1940‑2024 | 1 <br> 1 | DKRZ |
-| IFS-FESOM | fully-coupled | 0.1° lat x 0.2° lon | spectral nudging | ERA5 | free | HIST <br> NAT | 2017‑2024 <br> 2017‑2024 | 1 <br> 1 | DestinE/DKRZ |
 | AWI-CM-1 | fully-coupled | T127 <br> ~0.94° lat x ~0.94° lon | spectral nudging | ERA5 | free | HIST <br> NAT | 2014‑2025 <br> 2014‑2025 | 5 <br> 5 | DKRZ |
+| CESM2 | fully-coupled | 0.9° lat x 1.25° lon | grid-point nudging | ERA5 | prescribed | HIST <br> NAT | 1940‑2024 <br> 1940‑2024 | 1 <br> 1 | DKRZ |
 | ECHAM6 | atmospheric circulation only | T255 <br> ~0.47° lat x ~0.47° lon | spectral nudging | NCEP-NCAR-1 | prescribed | HIST <br> NAT | 2015‑present <br> 2015‑present | 5 <br> 5 | DKRZ |
-| CESM3 | in preparation |  |  |  |  |  |  |  |  |
+| IFS-FESOM | fully-coupled | 0.1° lat x 0.2° lon | spectral nudging | ERA5 | free | HIST <br> NAT | 2017‑2024 <br> 2017‑2024 | 1 <br> 1 | DestinE/DKRZ |
 | AWI-CM-3 | in preparation |  |  |  |  |  |  |  |  |
+| CESM3 | in preparation |  |  |  |  |  |  |  |  |
 | ICON | in preparation |  |  |  |  |  |  |  |  |
+
+## AWI-CM-1
+Briefly, spectral nudging was applied to vorticity and divergence fields between 100 and 700 hPa with a sigmoidal transition, using a relaxation timescale of 24 hours and a spectral truncation at zonal wavenumber 20. Since the model is fully coupled, ocean and sea ice states are fully dynamic and can adapt to varying background climate conditions and the imposed wind anomalies.
+
+#### Data ownership:
+The simulations are created by the Alfred Wegener Institute, Helmholtz-Center for Polar and Marine Research, Bremerhaven, Germany. Contact with the working group is mandatory before usage of the data. Contact persons are [Helge Goessling](mailto:helge.goessling@awi.de), [Antonio Sánchez Benítez](mailto:antonio.sanchez.benitez@awi.de) and [Marylou Athanase](mailto:marylou.athanase@awi.de).
+
+#### Key literature:
+* [Athanase et al. (2024)](https://doi.org/10.1038/s43247-024-01847-0)
+* [Sánchez-Benítez et al. (2022)](https://doi.org/10.1175/JCLI-D-21-0573.1)
+
+#### Available simulations:
+| Simulation | Appreviation | Description | Covered timeperiod | Ensemble members |
+| ------------- |-------------|-------------|-------------|-------------|
+| Weak Nudging |  |  |  |  |
+| Historical | Hist | 1950 boundary conditions | 2014‑2024 | 5 |
+| Long-Nudged | Hist-Long | recorded boundary conditions | 1980‑2024 | 1 |
+| Pre-industrial | Cont | recorded boundary conditions | 2014‑2024 | 5 |
+|  | Tp2K | boundary conditions from a 2K warmer world | 2014‑2024 | 5 |
+| Strong Nudging |  |  |  |  |
+| Historical | Hist | 1950 boundary conditions | 2017‑2024 | 1 |
+| Pre-industrial | Cont | recorded boundary conditions | 2017‑2024 | 1 |
+|  | Tp2K | boundary conditions from a 2K warmer world | 2017‑2024 | 1 |
+
+Note: The long-nudged run should not be taken as sixth ensemble member without rigorous testing.
+
+#### Overview of the available variables:
+A variety of different atmospheric and ocean related variabels are saved at hourly and daily time scales. A full overview is provided at ??.
+
+#### Access the data:
+A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [XX](XX).
 
 ## CESM2
 In summary, atmospheric grid-point nudging to ERA5 meridional and zonal winds was applied down to 700 hPa using a standard relaxation procedure at 3‑hourly intervals, while allowing the planetary boundary layer to evolve freely. In addition, sea surface temperatures were prescribed to observed and counterfactual values to ensure a physically plausible representation in the climate model. Counterfactual SSTs were estimated using a pattern filtering method [Wills et al. (2020)](https://doi.org/10.1175/JCLI-D-19-0855.1). NUDGING TIME???
@@ -43,6 +74,29 @@ A variety of different atmospheric and land related variabels are saved at daily
 
 #### Access the data:
 A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [Load_nudging_CESM2.ipynb](Load_nudging_CESM2.ipynb)
+
+## ECHAM6
+In contrast to the other three models, ECHAM6 is an atmospheric general circulation model (the atmospheric component of MPI-ESM at T255 using 95 levels) coupled to the land surface and vegetation model JSBACH. All simulations apply spectral nudging towards NCEP-NCAR Reanalysis 1 to constrain large-scale circulation patterns. Vorticity and divergence are nudged at large spatial scales above the 750 hPa level up to 3 hPa following a plateau-shaped profile with a relaxation time of 50 minutes, with no nudging applied near the surface to allow the model to freely develop regional-scale processes. The targeted warming levels are achieved by defining sea surface temperature warming or cooling patterns and greenhouse gas concentrations that correspond to the desired global‑warming magnitude. The SST warming or cooling patterns are created by adding or subtracting a climatological pattern (based on ECHAM6 CMIP6 simulations, MPI-ESM1.2-HR) to or from NCEP SSTs. The pre-industrial simulations apply emissions of 1890 and the factual storylines the GHGs concentrations of RCP4.5 corresponding to their warming level. These boundary conditions can be specified with high confidence because both SSTs and GHG concentrations are strongly linked to anthropogenic forcing and are well understood in terms of their large-scale response characteristics. Each storyline consists of five ensemble members, and their spin-up simulations start on consecutive weeks to represent model and initial condition uncertainty.
+
+#### Data ownership:
+The simulations are created by the Institute of Coastal Systems, Helmholtz-Zentrum Hereon, Geesthacht, Germany. Contact with the working group is mandatory before usage of the data. The contact person is [Frauke Feser](mailto:Frauke.Feser@hereon.de).
+
+#### Key literature:
+* [van Garderen et al. (2021)](https://doi.org/10.5194/nhess-21-171-2021)
+* [Feser et al. (2024)](https://doi.org/10.1175/BAMS-D-24-0017.1)
+
+#### Available simulations:
+| Simulation | Appreviation | Description | Covered timeperiod | Ensemble members |
+| ------------- |-------------|-------------|-------------|-------------|
+| Historical | Hist | 1950 boundary conditions | 2015‑present | 5 |
+| Pre-industrial | Cont | recorded boundary conditions | 2015‑present | 5 |
+|  | Tp2K | boundary conditions from a 2K warmer world | 2015‑present | 5 |
+
+#### Overview of the available variables:
+A variety of different atmospheric and ocean related variabels are saved at hourly and daily time scales. A full overview is provided at ??.
+
+#### Access the data:
+A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [XX](XX).
 
 ## IFS-FESOM
 In short, Newtonian relaxation spectral nudging to ERA5 is applied to vorticity and divergence between 100 and 700 hPa, with a sigmoidal transition. This allows the planetary boundary layer and air-sea-ice coupling to develop freely. A triangular truncation of T60 with a relatively short relaxation time timescale (e-folding time) of 1 hour is used for the nudging.
@@ -70,58 +124,3 @@ A variety of different atmospheric and ocean related variabels are saved at hour
 
 #### Access the data:
 To access the data it is mandatory to have an upgraded account at the [DestinE Platform](https://platform.destine.eu/support-pages/access-policy/). The data can be downloaded via the Destination Earth Polytope API as descriped in this [repository](https://github.com/John-Amal/retriever_polytop/tree/main).
-
-## AWI-CM-1
-Briefly, spectral nudging was applied to vorticity and divergence fields between 100 and 700 hPa with a sigmoidal transition, using a relaxation timescale of 24 hours and a spectral truncation at zonal wavenumber 20. Since the model is fully coupled, ocean and sea ice states are fully dynamic and can adapt to varying background climate conditions and the imposed wind anomalies.
-
-#### Data ownership:
-The simulations are created by the Alfred Wegener Institute, Helmholtz-Center for Polar and Marine Research, Bremerhaven, Germany. Contact with the working group is mandatory before usage of the data. Contact persons are [Helge Goessling](mailto:helge.goessling@awi.de), [Antonio Sánchez Benítez](mailto:antonio.sanchez.benitez@awi.de) and [Marylou Athanase](mailto:marylou.athanase@awi.de).
-
-#### Key literature:
-* [Athanase et al. (2024)](https://doi.org/10.1038/s43247-024-01847-0)
-* [Sánchez-Benítez et al. (2022)](https://doi.org/10.1175/JCLI-D-21-0573.1)
-
-#### Available simulations:
-| Simulation | Appreviation | Description | Covered timeperiod | Ensemble members |
-| ------------- |-------------|-------------|-------------|-------------|
-| Weak Nudging |  |  |  |  |
-| Historical | Hist | 1950 boundary conditions | 2017‑2024 | 1 |
-| Pre-industrial | Cont | recorded boundary conditions | 2017‑2024 | 1 |
-| Long-Nudged | Cont | recorded boundary conditions | 2017‑2024 | 1 |
-|  | Tp2K | boundary conditions from a 2K warmer world | 2017‑2024 | 1 |
-| Strong Nudging |  |  |  |  |
-| Historical | Hist | 1950 boundary conditions | 2017‑2024 | 1 |
-| Pre-industrial | Cont | recorded boundary conditions | 2017‑2024 | 1 |
-|  | Tp2K | boundary conditions from a 2K warmer world | 2017‑2024 | 1 |
-
-Note: The long-nudged run should not be taken as sixth ensemble member without rigorous testing.
-
-#### Overview of the available variables:
-A variety of different atmospheric and ocean related variabels are saved at hourly and daily time scales. A full overview is provided at ??.
-
-#### Access the data:
-A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [XX](XX).
-
-## ECHAM6
-In contrast to the other three models, ECHAM6 is an atmospheric general circulation model (the atmospheric component of MPI-ESM at T255 using 95 levels) coupled to the land surface and vegetation model JSBACH. All simulations apply spectral nudging towards NCEP-NCAR Reanalysis 1 to constrain large-scale circulation patterns. Vorticity and divergence are nudged at large spatial scales above the 750 hPa level up to 3 hPa following a plateau-shaped profile with a relaxation time of 50 minutes, with no nudging applied near the surface to allow the model to freely develop regional-scale processes. The targeted warming levels are achieved by defining sea surface temperature warming or cooling patterns and greenhouse gas concentrations that correspond to the desired global‑warming magnitude. The SST warming or cooling patterns are created by adding or subtracting a climatological pattern (based on ECHAM6 CMIP6 simulations, MPI-ESM1.2-HR) to or from NCEP SSTs. The pre-industrial simulations apply emissions of 1890 and the factual storylines the GHGs concentrations of RCP4.5 corresponding to their warming level. These boundary conditions can be specified with high confidence because both SSTs and GHG concentrations are strongly linked to anthropogenic forcing and are well understood in terms of their large-scale response characteristics. Each storyline consists of five ensemble members, and their spin-up simulations start on consecutive weeks to represent model and initial condition uncertainty.
-
-#### Data ownership:
-The simulations are created by the Institute of Coastal Systems, Helmholtz-Zentrum Hereon, Geesthacht, Germany. Contact with the working group is mandatory before usage of the data. The contact person is [Frauke Feser](mailto:Frauke.Feser@hereon.de).
-
-#### Key literature:
-* [van Garderen et al. (2021)](https://doi.org/10.5194/nhess-21-171-2021)
-* [Feser et al. (2024)](https://doi.org/10.1175/BAMS-D-24-0017.1)
-
-#### Available simulations:
-| Simulation | Appreviation | Description | Covered timeperiod | Ensemble members |
-| ------------- |-------------|-------------|-------------|-------------|
-| Historical | Hist | 1950 boundary conditions | 2017‑2024 | 1 |
-| Pre-industrial | Cont | recorded boundary conditions | 2017‑2024 | 1 |
-|  | Tp2K | boundary conditions from a 2K warmer world | 2017‑2024 | 1 |
-
-#### Overview of the available variables:
-A variety of different atmospheric and ocean related variabels are saved at hourly and daily time scales. A full overview is provided at ??.
-
-#### Access the data:
-A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [XX](XX).
-
