@@ -13,10 +13,10 @@ The conceptual basis of this approach is discussed in [Shepherd (2016)](https://
 
 | Model | Type | Spatial Resolution | Nuding Method | Nuding dataset | SST | Experiments | Time period | Ensemble members | Data archive |
 | ------------- |-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|
-| AWI-CM-1 | fully-coupled | T127 <br> ~0.94° lat x ~0.94° lon | spectral nudging | ERA5 | free | HIST <br> NAT | 2014‑2025 <br> 2014‑2025 | 5 <br> 5 | DKRZ |
-| CESM2 | fully-coupled | 0.9° lat x 1.25° lon | grid-point nudging | ERA5 | prescribed | HIST <br> NAT | 1940‑2024 <br> 1940‑2024 | 1 <br> 1 | DKRZ |
-| ECHAM6 | atmospheric circulation only | T255 <br> ~0.47° lat x ~0.47° lon | spectral nudging | NCEP-NCAR-1 | prescribed | HIST <br> NAT | 2015‑present <br> 2015‑present | 5 <br> 5 | DKRZ |
-| IFS-FESOM | fully-coupled | 0.1° lat x 0.2° lon | spectral nudging | ERA5 | free | HIST <br> NAT | 2017‑2024 <br> 2017‑2024 | 1 <br> 1 | DestinE/DKRZ |
+| AWI-CM-1 | fully-coupled | T127 <br> ~0.94° lat x ~0.94° lon | spectral nudging | ERA5 | free | HIST <br> PI | 2014‑2025 <br> 2014‑2025 | 5 <br> 5 | DKRZ |
+| CESM2 | fully-coupled | 0.9° lat x 1.25° lon | grid-point nudging | ERA5 | prescribed | HIST <br> PI | 1940‑2024 <br> 1940‑2024 | 1 <br> 1 | DKRZ |
+| ECHAM6 | atmospheric circulation only | T255 <br> ~0.47° lat x ~0.47° lon | spectral nudging | NCEP-NCAR-1 | prescribed | HIST <br> PI | 2015‑present <br> 2015‑present | 5 <br> 5 | DKRZ |
+| IFS-FESOM | fully-coupled | 0.1° lat x 0.2° lon | spectral nudging | ERA5 | free | HIST <br> PI | 2017‑2024 <br> 2017‑2024 | 1 <br> 1 | DestinE/DKRZ |
 | AWI-CM-3 | in preparation |  |  |  |  |  |  |  |  |
 | CESM3 | in preparation |  |  |  |  |  |  |  |  |
 | ICON | in preparation |  |  |  |  |  |  |  |  |
