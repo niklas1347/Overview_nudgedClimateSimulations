@@ -47,9 +47,22 @@ A DKRZ account is mandatory to access the data. A detailed description of how to
 In short, Newtonian relaxation spectral nudging to ERA5 is applied to vorticity and divergence between 100 and 700 hPa, with a sigmoidal transition. This allows the planetary boundary layer and air-sea-ice coupling to develop freely. A triangular truncation of T60 with a relatively short relaxation time timescale (e-folding time) of 1 hour is used for the nudging.
 
 #### Data ownership:
-This simulations forms a core operational component of the EU’s Destination Earth Climate Digital Twin, enabling scalable, high-resolution, circulation-constrained climate storylines for science and decision-making. Therefore the usage of this data is restricted according to the details outlined at the [DestinE Platform](https://platform.destine.eu).
+This simulations forms a core operational component of the EU’s Destination Earth Climate Digital Twin, enabling scalable, high-resolution, circulation-constrained climate storylines for science and decision-making. Therefore the usage of this data is restricted according to the details outlined at the [DestinE Platform](https://platform.destine.eu/support-pages/access-policy/).
 
 #### Key literature:
 * [John et al. (2026)](https://doi.org/10.22541/essoar.173160166.64258929/v3)
 
-* #### Available simulations:
+#### Available simulations:
+| Simulation | Appreviation | Description | Covered timeperiod | Ensemble members |
+| ------------- |-------------|-------------|-------------|-------------|
+| Historical | Hist | 1950 boundary conditions | 2017‑2024 | 1 |
+| Pre-industrial | Cont | recorded boundary conditions | 2017‑2024 | 1 |
+|  | Tp2K | boundary conditions from a 2K warmer world | 2017‑2024 | 1 |
+
+more deteails about the simulations:
+<img width="871" height="308" alt="image" src="https://github.com/user-attachments/assets/3ed0bf0e-06c5-472e-8fa3-ba78b2ce4d59" />
+Source: [John et al. (2026)](https://doi.org/10.22541/essoar.173160166.64258929/v3)
+
+#### Overview of the available variables:
+A variety of different atmospheric and ocean related variabels are saved at hourly and daily time scales. A full overview is provided on page 35ff in 
+
