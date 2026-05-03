@@ -42,16 +42,16 @@ The simulations are created by the Alfred Wegener Institute, Helmholtz-Center fo
 | Weak Nudging (Relaxation time 24H) |  |  |  |  |
 | Historical | Hist | forcing hist - ssp370 from 2014 onwards  | 2014‑2025 | 5 |
 | Historical Long-Nudged | Hist-Long | forcing hist - ssp370 from 1979 onwards  | 1979‑2024 | 1 |
-| Pre-industrial | Pi | forcing from 1854 onwards | 2014‑2024 | 5 |
-|  | 2K | forcing hist - ssp370 from 1999 onwards | 2014‑2024 | 5 |
-|  | 3K | forcing ssp370 from 2027 onwards | 2014‑2024 | 5 |
-|  | 4K | forcing from 2055 onwards | 2014‑2024 | 5 |
+| Pre-industrial | Pi | forcing from 1854 onwards | 2014‑2025 | 5 |
+|  | 2K | forcing hist - ssp370 from 1999 onwards | 2014‑2025 | 5 |
+|  | 3K | forcing ssp370 from 2027 onwards | 2014‑2025 | 5 |
+|  | 4K | forcing from 2055 onwards | 2014‑2025 | 5 |
 | Strong Nudging (Relaxation time 1H) |  |  |  |  |
 | Historical | Hist | forcing hist - ssp370 from 2014 onwards  | 2014‑2025 | 1 |
-| Pre-industrial | Pi | forcing from 1854 onwards | 2014‑2024 | 1 |
-|  | 2K | forcing hist - ssp370 from 1999 onwards | 2014‑2024 | 1 |
-|  | 3K | forcing ssp370 from 2027 onwards | 2014‑2024 | 1 |
-|  | 4K | forcing from 2055 onwards | 2014‑2024 | 1 |
+| Pre-industrial | Pi | forcing from 1854 onwards | 2014‑2025 | 1 |
+|  | 2K | forcing hist - ssp370 from 1999 onwards | 2014‑2025 | 1 |
+|  | 3K | forcing ssp370 from 2027 onwards | 2014‑2025 | 1 |
+|  | 4K | forcing from 2055 onwards | 2014‑2025| 1 |
 
 Note: The long-nudged run should not be taken as sixth ensemble member without rigorous testing.
 
