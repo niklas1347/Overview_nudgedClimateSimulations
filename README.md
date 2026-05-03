@@ -22,7 +22,12 @@ The conceptual basis of this approach is discussed in [Shepherd (2016)](https://
 | ICON | in preparation |  |  |  |  |  |  |  |  |
 
 ## AWI-CM-1
-Briefly, spectral nudging was applied to vorticity and divergence fields between 100 and 700 hPa with a sigmoidal transition, using a relaxation timescale of 24 hours and a spectral truncation at zonal wavenumber 20. Since the model is fully coupled, ocean and sea ice states are fully dynamic and can adapt to varying background climate conditions and the imposed wind anomalies.
+Q: 
+- The long nudged simulation is not avaliable anymore.
+- Is there a descriptive google doc about the strongly nudged simulation as well?
+- Why do the n2014 runs start with the forcing from 1854 and the n2017 ones from 1851? Shouldn't it be the other way around?
+
+Briefly, spectral nudging was applied to vorticity and divergence fields between 100 and 700 hPa with a sigmoidal transition, using a relaxation timescale of 24 hours (weakly nudged) and 1 hour (strongly nudged) and a spectral truncation at zonal wavenumber 20. Since the model is fully coupled, ocean and sea ice states are fully dynamic and can adapt to varying background climate conditions and the imposed wind anomalies. Storylines are first initialized using states from our AWI-CM-1-1-MR historical and Shared Socio-economic Pathway scenario ssp370 free-running simulations to produce the different background climate conditions. Preindustrial, present-day, +2 °C, +3 °C and +4 °C conditions are obtained by branching nudged simulations off the free runs respectively. Storyline simulations are then extended from these different initial states, and nudged to the global atmospheric vorticity and divergence from ERA5 for the respecitve time period.
 
 #### Data ownership:
 The simulations are created by the Alfred Wegener Institute, Helmholtz-Center for Polar and Marine Research, Bremerhaven, Germany. Contact with the working group is mandatory before usage of the data. Contact persons are [Helge Goessling](mailto:helge.goessling@awi.de), [Antonio Sánchez Benítez](mailto:antonio.sanchez.benitez@awi.de) and [Marylou Athanase](mailto:marylou.athanase@awi.de).
@@ -34,23 +39,27 @@ The simulations are created by the Alfred Wegener Institute, Helmholtz-Center fo
 #### Available simulations:
 | Simulation | Appreviation | Description | Covered timeperiod | Ensemble members |
 | ------------- |-------------|-------------|-------------|-------------|
-| Weak Nudging |  |  |  |  |
-| Historical | Hist | 1950 boundary conditions | 2014‑2024 | 5 |
-| Long-Nudged | Hist-Long | recorded boundary conditions | 1980‑2024 | 1 |
-| Pre-industrial | Cont | recorded boundary conditions | 2014‑2024 | 5 |
-|  | Tp2K | boundary conditions from a 2K warmer world | 2014‑2024 | 5 |
-| Strong Nudging |  |  |  |  |
-| Historical | Hist | 1950 boundary conditions | 2017‑2024 | 1 |
-| Pre-industrial | Cont | recorded boundary conditions | 2017‑2024 | 1 |
-|  | Tp2K | boundary conditions from a 2K warmer world | 2017‑2024 | 1 |
+| Weak Nudging (Relaxation time 24H) |  |  |  |  |
+| Historical | Hist | forcing hist - ssp370 from 2014 onwards  | 2014‑2025 | 5 |
+| Historical Long-Nudged | Hist-Long | forcing hist - ssp370 from 1979 onwards  | 1979‑2024 | 1 |
+| Pre-industrial | Pi | forcing from 1854 onwards | 2014‑2024 | 5 |
+|  | 2K | forcing hist - ssp370 from 1999 onwards | 2014‑2024 | 5 |
+|  | 3K | forcing ssp370 from 2027 onwards | 2014‑2024 | 5 |
+|  | 4K | forcing from 2055 onwards | 2014‑2024 | 5 |
+| Strong Nudging (Relaxation time 1H) |  |  |  |  |
+| Historical | Hist | forcing hist - ssp370 from 2014 onwards  | 2014‑2025 | 1 |
+| Pre-industrial | Pi | forcing from 1854 onwards | 2014‑2024 | 1 |
+|  | 2K | forcing hist - ssp370 from 1999 onwards | 2014‑2024 | 1 |
+|  | 3K | forcing ssp370 from 2027 onwards | 2014‑2024 | 1 |
+|  | 4K | forcing from 2055 onwards | 2014‑2024 | 1 |
 
 Note: The long-nudged run should not be taken as sixth ensemble member without rigorous testing.
 
 #### Overview of the available variables:
-A variety of different atmospheric and ocean related variabels are saved at hourly and daily time scales. A full overview is provided at ??.
+A variety of different atmospheric, land and ocean related variabels are saved at hourly and daily time scales. A full overview is provided at GoogleExcels for the [weak, Long Nudged](https://docs.google.com/spreadsheets/d/1utW34DZOlmuqFNoeF0Q2V2o1Wkc4DvcV/edit?rtpof=true&sd=true&gid=413063172#gid=413063172), [weak, Short Nudged](https://docs.google.com/spreadsheets/d/18pUk3eRy8YrR24MA9dO-PGjBhRTT3NQG/edit?usp=sharing&ouid=108604764774415117536&rtpof=true&sd=true) in the second sheet ("Data_Description").
 
 #### Access the data:
-A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [XX](XX).
+A DKRZ account is mandatory to access the data. A full overview of the specific locations is provided at GoogleExcels for the [weak, Long Nudged](https://docs.google.com/spreadsheets/d/1utW34DZOlmuqFNoeF0Q2V2o1Wkc4DvcV/edit?rtpof=true&sd=true&gid=413063172#gid=413063172), [weak, Short Nudged](https://docs.google.com/spreadsheets/d/18pUk3eRy8YrR24MA9dO-PGjBhRTT3NQG/edit?usp=sharing&ouid=108604764774415117536&rtpof=true&sd=true) in the first sheet ("Exp_list"). The datatime of some of the data needs to be shifted to given time periods given in the documents. To combine the n2014 and n2017 data it is recommended to use 01/2014-12/2017 from n2014 and 01/2018-12/2024 from n2017, so we allow a year of spin-up. The variabels can represent instantaneous and accumulated values. A detailed overview about which variables means what is provided in [this guide](https://www.cen.uni-hamburg.de/en/icdc/data/atmosphere/docs-atmo/echam6-userguide.pdf).
 
 ## CESM2
 In summary, atmospheric grid-point nudging to ERA5 meridional and zonal winds was applied down to 700 hPa using a standard relaxation procedure at 3‑hourly intervals, while allowing the planetary boundary layer to evolve freely. In addition, sea surface temperatures were prescribed to observed and counterfactual values to ensure a physically plausible representation in the climate model. Counterfactual SSTs were estimated using a pattern filtering method [Wills et al. (2020)](https://doi.org/10.1175/JCLI-D-19-0855.1). NUDGING TIME???
