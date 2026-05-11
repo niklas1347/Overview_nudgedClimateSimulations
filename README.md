@@ -23,8 +23,8 @@ The conceptual basis of this approach is discussed in [Shepherd (2016)](https://
 
 ## AWI-CM-1
 Q: 
-- Is there a descriptive google doc about the strongly nudged simulation as well? Or would it be possible to include the information in one of the existing Google Documents, maybe even merge the two for the long / and short runs to make if more accessible.
-- Why do the n2014 runs for the preindustiral start with the forcing from 1854 and the n2017 ones from 1851? Shouldn't the n2017 runs start 3 years **after** the n214 so with the forcing of 1857?
+- Is there an overview GoogleDoc about the strongly nudged simulation as well? Or would it be possible to include the information in one of the existing GoogleDocs, maybe even merge the two for the long / and short runs to make if more accessible?
+- Why do the n2014 run for the preindustiral start with the forcing from 1854 and the n2017 ones from 1851? Shouldn't the n2017 runs start 3 years **after** the n2014 which would be the forcing of 1857?
 
 Briefly, spectral nudging was applied to vorticity and divergence fields between 100 and 700 hPa with a sigmoidal transition, using a relaxation timescale of 24 hours (weakly nudged) and 1 hour (strongly nudged) and a spectral truncation at zonal wavenumber 20. Since the model is fully coupled, ocean and sea ice states are fully dynamic and can adapt to varying background climate conditions and the imposed wind anomalies. Storylines are first initialized using states from our AWI-CM-1-1-MR historical and Shared Socio-economic Pathway scenario ssp370 free-running simulations to produce the different background climate conditions. Preindustrial, present-day, +2 °C, +3 °C and +4 °C conditions are obtained by branching nudged simulations off the free runs respectively. Storyline simulations are then extended from these different initial states, and nudged to the global atmospheric vorticity and divergence from ERA5 for the respecitve time period.
 
