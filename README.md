@@ -62,7 +62,11 @@ A variety of different atmospheric, land and ocean related variabels are saved a
 A DKRZ account is mandatory to access the data. A full overview of the specific locations is provided at GoogleExcels for the [weak, Long Nudged](https://docs.google.com/spreadsheets/d/1utW34DZOlmuqFNoeF0Q2V2o1Wkc4DvcV/edit?rtpof=true&sd=true&gid=413063172#gid=413063172), [weak, Short Nudged](https://docs.google.com/spreadsheets/d/18pUk3eRy8YrR24MA9dO-PGjBhRTT3NQG/edit?usp=sharing&ouid=108604764774415117536&rtpof=true&sd=true) in the first sheet ("Exp_list"). The datatime of some of the data needs to be shifted to given time periods given in the documents. To combine the n2014 and n2017 data it is recommended to use 01/2014-12/2017 from n2014 and 01/2018-12/2024 from n2017, so we allow a year of spin-up. The variabels can represent instantaneous and accumulated values. A detailed overview about the specific variables is provided in [this guide](https://www.cen.uni-hamburg.de/en/icdc/data/atmosphere/docs-atmo/echam6-userguide.pdf).
 
 ## CESM2
-In summary, atmospheric grid-point nudging to ERA5 meridional and zonal winds was applied down to 700 hPa using a standard relaxation procedure at 3‑hourly intervals, while allowing the planetary boundary layer to evolve freely. In addition, sea surface temperatures were prescribed to observed and counterfactual values to ensure a physically plausible representation in the climate model. Counterfactual SSTs were estimated using a pattern filtering method [Wills et al. (2020)](https://doi.org/10.1175/JCLI-D-19-0855.1). NUDGING TIME???
+Q: 
+- what is the NUDGING TIME???
+
+
+In summary, atmospheric grid-point nudging to ERA5 meridional and zonal winds was applied down to 700 hPa using a standard relaxation procedure at 3‑hourly intervals, while allowing the planetary boundary layer to evolve freely. In addition, sea surface temperatures were prescribed to observed and counterfactual values to ensure a physically plausible representation in the climate model. Counterfactual SSTs were estimated using a pattern filtering method [Wills et al. (2020)](https://doi.org/10.1175/JCLI-D-19-0855.1).
 
 #### Data ownership:
 The simulations are created by the research group of Prof. Sebastian Sippel at the University of Leipzig. Contact with the working group is mandatory before usage of the data. Contact persons are [Sebastian Sipple](mailto:sebastian.sippel@uni-leipzig.de) or [István Dunkl](mailto:istvan.dunkl@uni-leipzig.de).
