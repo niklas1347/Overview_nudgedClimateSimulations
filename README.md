@@ -11,7 +11,7 @@ The conceptual basis of this approach is discussed in [Shepherd (2016)](https://
 
 ## 🛠 Included climate models in this overview
 
-| Model | Type | Spatial Resolution | Nuding Method | Nuding dataset | SST | Experiments | Time period | Ensemble members | Data archive |
+| Model | Type | Spatial Resolution | Nuding Method | Nuding dataset | SST | Key Experiments | Time period | Ensemble members | Data archive |
 | ------------- |-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|
 | AWI-CM-1 | fully-coupled | T127 <br> ~0.94° lat x ~0.94° lon | spectral nudging | ERA5 | free | HIST <br> PI | 2014‑2025 <br> 2014‑2025 | 5 <br> 5 | DKRZ |
 | CESM2 | fully-coupled | 0.9° lat x 1.25° lon | grid-point nudging | ERA5 | prescribed | HIST <br> PI | 1940‑2024 <br> 1940‑2024 | 1 <br> 1 | DKRZ |
