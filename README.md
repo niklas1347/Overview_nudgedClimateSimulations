@@ -46,9 +46,9 @@ The simulations are created by the Alfred Wegener Institute, Helmholtz-Center fo
 |  | 4K | forcing from 2090 onwards | 2014‑2025 | 5 |
 | Historical Long-Nudged | Hist-Long | forcing hist-ssp370 from 1979 onwards  | 1979‑2024 | 1 |
 | Pre-industrial Long-Nudged | Pi-Long | forcing hist from 1851 onwards  | 1979‑2024 | 1 |
-| 2K Long-Nudged | 2K Long | forcing hist-ssp370 from 1999 onwards  | 1979‑2024 | 1 |
-| 3K Long-Nudged | 2K Long | forcing ssp370 from 2027 onwards  | 1979‑2024 | 1 |
-| 4K Long-Nudged | 2K Long | forcing ssp370 from 2055 onwards  | 1979‑2024 | 1 |
+| | 2K-Long | forcing hist-ssp370 from 1999 onwards  | 1979‑2024 | 1 |
+| | 2KLong | forcing ssp370 from 2027 onwards  | 1979‑2024 | 1 |
+| | 2K-Long | forcing ssp370 from 2055 onwards  | 1979‑2024 | 1 |
 | Strong Nudging |  | (Relaxation time 1H) |  |  |
 | Historical | Hist | forcing hist-ssp370 from 2014 onwards  | 2014‑2025 | 1 |
 | Pre-industrial | Pi | forcing from 1854 onwards | 2014‑2025 | 1 |
