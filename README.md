@@ -62,7 +62,7 @@ Note: The long-nudged run should not be taken as sixth ensemble member without r
 A variety of different atmospheric, land and ocean related variabels are saved at hourly and daily time scales. A full overview is provided at GoogleExcels for the [weak, Long Nudged](https://docs.google.com/spreadsheets/d/1utW34DZOlmuqFNoeF0Q2V2o1Wkc4DvcV/edit?rtpof=true&sd=true&gid=413063172#gid=413063172), [weak, Short Nudged](https://docs.google.com/spreadsheets/d/18pUk3eRy8YrR24MA9dO-PGjBhRTT3NQG/edit?usp=sharing&ouid=108604764774415117536&rtpof=true&sd=true) in the second sheet ("Data_Description").
 
 #### Access the data:
-A DKRZ account is mandatory to access the data. A full overview of the specific locations is provided at GoogleExcels for the [weak, Long Nudged](https://docs.google.com/spreadsheets/d/1utW34DZOlmuqFNoeF0Q2V2o1Wkc4DvcV/edit?rtpof=true&sd=true&gid=413063172#gid=413063172), [weak, Short Nudged](https://docs.google.com/spreadsheets/d/18pUk3eRy8YrR24MA9dO-PGjBhRTT3NQG/edit?usp=sharing&ouid=108604764774415117536&rtpof=true&sd=true) in the first sheet ("Exp_list"). The datetime of some of the data needs to be shifted to given time periods given in the documents. To combine the n2014 and n2017 data it is recommended to use 01/2014-12/2017 from n2014 and 01/2018-12/2024 from n2017, to allow a year of spin-up. The variabels can represent instantaneous and accumulated values. A detailed overview about the specific variables is provided in [this guide](https://www.cen.uni-hamburg.de/en/icdc/data/atmosphere/docs-atmo/echam6-userguide.pdf).
+A DKRZ account is mandatory to access the data. A full overview of the specific locations is provided at GoogleExcels for the [weak, Long Nudged](https://docs.google.com/spreadsheets/d/1utW34DZOlmuqFNoeF0Q2V2o1Wkc4DvcV/edit?rtpof=true&sd=true&gid=413063172#gid=413063172), [weak, Short Nudged](https://docs.google.com/spreadsheets/d/18pUk3eRy8YrR24MA9dO-PGjBhRTT3NQG/edit?usp=sharing&ouid=108604764774415117536&rtpof=true&sd=true) in the first sheet ("Exp_list"). The datetime of some of the data needs to be shifted to the given time periods given in the documents. To combine the n2014 and n2017 data it is recommended to use 01/2014-12/2017 from n2014 and 01/2018-12/2024 from n2017, to allow a year of spin-up. The variabels can represent instantaneous and accumulated values. A detailed overview about the specific variables is provided in [this guide](https://www.cen.uni-hamburg.de/en/icdc/data/atmosphere/docs-atmo/echam6-userguide.pdf).
 
 ## CESM2
 Q: 
@@ -81,8 +81,8 @@ The simulations are created by István Dunkl who is part of the research group o
 | ------------- |-------------|-------------|-------------|-------------|
 | Historical | HIST | historical CO2 | 1940‑2024 | 1 |
 | Pre-industrial | NAT | 1850 CO2 (282ppm) and aerosol levels | 1940‑2024 | 1 |
-|  | THERM | Historical without CO2 fertilization | 1940‑2024 | 1 |
-|  | PD | Costant present-day forcing | 1940‑2024 | 1 |
+|  | THERM | historical without CO2 fertilization | 1940‑2024 | 1 |
+|  | PD | constant present-day forcing | 1940‑2024 | 1 |
 
 #### Overview of the available variables:
 A variety of different atmospheric and land related variabels are saved at daily and monthly time scales. A full overview is provided in the Juptyer Notebook: [Load_nudging_CESM2.ipynb](Load_nudging_CESM2.ipynb)
@@ -93,7 +93,7 @@ A DKRZ account is mandatory to access the data. A detailed description of how to
 ## ECHAM6
 Q:
 - Is there any document which provides an overview of the available variables because as far as I see not all variables are saved?
-- Is there any document which gives an overview of the different runs or are they all stored in the folder /work/gg0301/g262012/mpiesm-landveg/experiments/ (which is the only one I am aware of). If this is the case I can provide an overview in a seperate JupyterNotebook or here with a table.
+- Is there any document which gives an overview of the different runs and where they are stored? Or are they all in the folder /work/gg0301/g262012/mpiesm-landveg/experiments/ (which is the only one I am aware of)? If this is the case I can provide an overview in a seperate JupyterNotebook or here with a table.
 
 ECHAM6 is an atmospheric general circulation model (the atmospheric component of MPI-ESM at T255 using 95 levels) coupled to the land surface and vegetation model JSBACH. All simulations apply spectral nudging towards NCEP-NCAR Reanalysis 1 to constrain large-scale circulation patterns. Vorticity and divergence are nudged at large spatial scales above the 750 hPa level up to 3 hPa following a plateau-shaped profile with a relaxation time of 50 minutes, with no nudging applied near the surface to allow the model to freely develop regional-scale processes. The targeted warming levels are achieved by defining sea surface temperature warming or cooling patterns and greenhouse gas concentrations that correspond to the desired global‑warming magnitude. The SST warming or cooling patterns are created by adding or subtracting a climatological pattern (based on ECHAM6 CMIP6 simulations, MPI-ESM1.2-HR) to or from NCEP SSTs. The pre-industrial simulations apply emissions of 1890 and the factual storylines the GHGs concentrations of RCP4.5 corresponding to their warming level. These boundary conditions can be specified with high confidence because both SSTs and GHG concentrations are strongly linked to anthropogenic forcing and are well understood in terms of their large-scale response characteristics. Each storyline consists of five ensemble members, and their spin-up simulations start on consecutive weeks to represent model and initial condition uncertainty.
 
@@ -109,10 +109,10 @@ The simulations are created by the Institute of Coastal Systems, Helmholtz-Zentr
 | ------------- |-------------|-------------|-------------|-------------|
 | Historical | Hist | recorded boundary conditions | 2015‑2025 | 5 |
 | Pre-industrial | Cont | 1890 boundary conditions (CO2: 285ppmv, CH4: 790ppbv, N2O: 275ppbv, CFCs: 0) but with historical aerosol and sea ice concentration | 2015‑2025 | 5 |
-|  | Tp2K | boundary conditions from RCP8.5 with 2044-2053 average GHG concentrations | 2015‑2025 | 5 |
+|  | plus2K | boundary conditions from RCP8.5 with 2044-2053 average GHG concentrations (CO2: 553ppmv, CH4: 2411ppbv, N20: 357ppbv, CFC11: 142pptv, CFC12: 370pptv) | 2015‑2025 | 5 |
 
 #### Overview of the available variables:
-A variety of different atmospheric and ocean related variabels are saved at hourly timescales. A full overview is provided at ??. The labelling and description follows the official [GRIB ECMWF parameter database](https://codes.ecmwf.int/grib/param-db/).
+A variety of different atmospheric and ocean related variabels are saved at hourly timescales. A full overview of the available parameters is provided at ??. The labelling and description follows the official [GRIB ECMWF parameter database](https://codes.ecmwf.int/grib/param-db/).
 
 #### Access the data:
 A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [XX](XX).
