@@ -118,6 +118,12 @@ A variety of different atmospheric and ocean related variabels are saved at hour
 A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [XX](XX).
 
 ## IFS-FESOM
+Q:
+- Are there 5 Ensemble members? I saw this in the new draft but never checked in the files.
+- Is there a better document for the overview of the variables than the one I provided? Is this document even correct and up-to-date?
+- Would it be possible to provide some more information about how to download the data in the retriever Github? Especially about the different options what expver, generation, realisation, stream, etc. means and for example what the different options for the experiments, realisations are? For me at least it not clear yet how I could for example download the 3 ensemble member for the pre-industrial.
+
+
 In short, Newtonian relaxation spectral nudging to ERA5 is applied to vorticity and divergence between 100 and 700 hPa, with a sigmoidal transition. This allows the planetary boundary layer and air-sea-ice coupling to develop freely. A triangular truncation of T60 with a relatively short relaxation time timescale (e-folding time) of 1 hour is used for the nudging.
 
 #### Data ownership:
@@ -129,9 +135,9 @@ This simulations forms a core operational component of the EU’s Destination Ea
 #### Available simulations:
 | Simulation | Appreviation | Description | Covered timeperiod | Ensemble members |
 | ------------- |-------------|-------------|-------------|-------------|
-| Historical | Hist | 1950 boundary conditions | 2017‑2024 | 1 |
-| Pre-industrial | Cont | recorded boundary conditions | 2017‑2024 | 1 |
-|  | Tp2K | boundary conditions from a 2K warmer world | 2017‑2024 | 1 |
+| Historical | Hist | recorded boundary conditions | 2017‑2024 | 5 |
+| Pre-industrial | Cont | 1950 boundary conditions  | 2017‑2024 | 5 |
+|  | Tp2K | boundary conditions from a 2K warmer world (approx. 2040) | 2017‑2024 | 5 |
 
 more deteails about the simulations can be found here:
 
