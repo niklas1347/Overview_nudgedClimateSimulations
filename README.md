@@ -67,6 +67,7 @@ A variety of different atmospheric, land and ocean related variabels are saved a
 A DKRZ account is mandatory to access the data. A full overview of the specific locations is provided at GoogleExcels for the [weak, Long Nudged](https://docs.google.com/spreadsheets/d/1utW34DZOlmuqFNoeF0Q2V2o1Wkc4DvcV/edit?rtpof=true&sd=true&gid=413063172#gid=413063172), [weak, Short Nudged](https://docs.google.com/spreadsheets/d/18pUk3eRy8YrR24MA9dO-PGjBhRTT3NQG/edit?usp=sharing&ouid=108604764774415117536&rtpof=true&sd=true) in the first sheet ("Exp_list"). The datetime of some of the data needs to be shifted to the given time periods given in the documents. To combine the n2014 and n2017 data for the weakly nudged runs it is recommended to use 01/2014-12/2017 from n2014 and 01/2018-12/2024 from n2017, to allow a year of spin-up. The variabels can represent instantaneous and accumulated values. A detailed overview about the specific variables is provided in [this guide](https://www.cen.uni-hamburg.de/en/icdc/data/atmosphere/docs-atmo/echam6-userguide.pdf).
 
 #### News:
+-
 
 ## CESM2
 Q: 
@@ -96,6 +97,7 @@ A variety of different atmospheric and land related variabels are saved at daily
 A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [Load_nudging_CESM2.ipynb](Load_nudging_CESM2.ipynb). Note that the datetime can appear to be shifted, please check the proived Notebook for correct usage.
 
 #### News:
+-
 
 ## ECHAM6
 Q:
@@ -125,6 +127,7 @@ A variety of different atmospheric related variabels are saved at hourly timesca
 A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [XX](XX).
 
 #### News:
+-
 
 ## IFS-FESOM
 Q:
@@ -132,7 +135,6 @@ Q:
 - Is there a better document for the overview of the variables than the one I provided? Is this document even correct and up-to-date?
 - Would it be possible to provide some more information about how to download the data in the "retriever Github"? Especially some more information about the different options, like what expver, generation, realisation, stream, etc. means and for example what the different options for the experiments, realisations would be very helpful? For me at least it not clear yet how I could for example download the 3 ensemble member for the pre-industrial.
 - I proposed a file (IFS_FESOM_converter_reg_grid.py) to convert the .nc output from the retriever to a regular lat/lon grid, however this implementation is not super fast. Maybe there is a more native way to do this which I am not aware of or could this maybe be even be implemented at https://github.com/John-Amal/retriever_polytop? Because I guess most user would want to use a regular lat/lon grid.
-
 
 In short, Newtonian relaxation spectral nudging to ERA5 is applied to vorticity and divergence between 100 and 700 hPa, with a sigmoidal transition. This allows the planetary boundary layer and air-sea-ice coupling to develop freely. A triangular truncation of T60 with a relatively short relaxation time timescale (e-folding time) of 1 hour is used for the nudging.
 
@@ -162,3 +164,4 @@ A variety of different atmospheric and ocean related variabels are saved at hour
 To access the data it is mandatory to have an upgraded account at the [DestinE Platform](https://platform.destine.eu/support-pages/access-policy/). The data can be downloaded via the Destination Earth Polytope API as descriped in this [repository](https://github.com/John-Amal/retriever_polytop/tree/main). To convert the irregular grid from .nc file to a regular lat/lon file with the native 0.1° lat x 0.2° lon resolution you can use the [IFS_FESOM_converter_reg_grid.py](IFS_FESOM_converter_reg_grid.py) file provied.
 
 #### News:
+-
