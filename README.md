@@ -159,6 +159,6 @@ Source: [John et al. (2026)](https://doi.org/10.22541/essoar.173160166.64258929/
 A variety of different atmospheric and ocean related variabels are saved at hourly and daily time scales. A full overview is provided on page 35ff. in [DestinE_Framework](DestinE_Framework.pdf). The labelling and description follows the official [GRIB ECMWF parameter database](https://codes.ecmwf.int/grib/param-db/).
 
 #### Access the data:
-To access the data it is mandatory to have an upgraded account at the [DestinE Platform](https://platform.destine.eu/support-pages/access-policy/). The data can be downloaded via the Destination Earth Polytope API as descriped in this [repository](https://github.com/John-Amal/retriever_polytop/tree/main). To convert the irregular grid from .nc file to a regular lat/lon file with the native 0.1° lat x 0.2° lon resolution you can use the [.py](IFS_FESOM_converter_reg_grid.py) file provied.
+To access the data it is mandatory to have an upgraded account at the [DestinE Platform](https://platform.destine.eu/support-pages/access-policy/). The data can be downloaded via the Destination Earth Polytope API as descriped in this [repository](https://github.com/John-Amal/retriever_polytop/tree/main). To convert the irregular grid from .nc file to a regular lat/lon file with the native 0.1° lat x 0.2° lon resolution you can use the [IFS_FESOM_converter_reg_grid.py](IFS_FESOM_converter_reg_grid.py) file provied.
 
 #### News:
