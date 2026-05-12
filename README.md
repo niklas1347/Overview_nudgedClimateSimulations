@@ -3,7 +3,7 @@ This repository provides an overview of available wind‑nudged climate model si
 
 ## 🌟 General information about nudged climate storyline simulations
 
-Nudged model simulations refer to a class of climate experiments in which key aspects of the large-scale atmospheric circulation — most commonly winds — are constrained toward observational or reanalysis data during the simulation, while the model is otherwise free to generate its own small-scale processes and internal variability. This approach ensures consistency with the observed large-scale evolution while retaining a physically coherent representation of regional dynamics and feedbacks.
+Nudged model simulations refer to a class of climate experiments in which key aspects of the large-scale atmospheric circulation — most commonly winds — are constrained towards observational or reanalysis data during the simulation, while the model is otherwise free to generate its own small-scale processes and internal variability. This approach ensures consistency with the observed large-scale evolution while retaining a physically coherent representation of regional dynamics and feedbacks.
 
 Within the climate storyline framework, nudged simulations are used to isolate and examine the thermodynamic response of the climate system under different conditions by replaying specific events in alternative climates ("storylines"). By reducing variability associated with circulation differences, they provide a controlled setting for investigating how factors such as temperature, moisture, or external forcings influence impacts.
 
@@ -62,11 +62,12 @@ Note: The long-nudged run should not be taken as sixth ensemble member without r
 A variety of different atmospheric, land and ocean related variabels are saved at hourly and daily time scales. A full overview is provided at GoogleExcels for the [weak, Long Nudged](https://docs.google.com/spreadsheets/d/1utW34DZOlmuqFNoeF0Q2V2o1Wkc4DvcV/edit?rtpof=true&sd=true&gid=413063172#gid=413063172), [weak, Short Nudged](https://docs.google.com/spreadsheets/d/18pUk3eRy8YrR24MA9dO-PGjBhRTT3NQG/edit?usp=sharing&ouid=108604764774415117536&rtpof=true&sd=true) in the second sheet ("Data_Description").
 
 #### Access the data:
-A DKRZ account is mandatory to access the data. A full overview of the specific locations is provided at GoogleExcels for the [weak, Long Nudged](https://docs.google.com/spreadsheets/d/1utW34DZOlmuqFNoeF0Q2V2o1Wkc4DvcV/edit?rtpof=true&sd=true&gid=413063172#gid=413063172), [weak, Short Nudged](https://docs.google.com/spreadsheets/d/18pUk3eRy8YrR24MA9dO-PGjBhRTT3NQG/edit?usp=sharing&ouid=108604764774415117536&rtpof=true&sd=true) in the first sheet ("Exp_list"). The datetime of some of the data needs to be shifted to the given time periods given in the documents. To combine the n2014 and n2017 data it is recommended to use 01/2014-12/2017 from n2014 and 01/2018-12/2024 from n2017, to allow a year of spin-up. The variabels can represent instantaneous and accumulated values. A detailed overview about the specific variables is provided in [this guide](https://www.cen.uni-hamburg.de/en/icdc/data/atmosphere/docs-atmo/echam6-userguide.pdf).
+A DKRZ account is mandatory to access the data. A full overview of the specific locations is provided at GoogleExcels for the [weak, Long Nudged](https://docs.google.com/spreadsheets/d/1utW34DZOlmuqFNoeF0Q2V2o1Wkc4DvcV/edit?rtpof=true&sd=true&gid=413063172#gid=413063172), [weak, Short Nudged](https://docs.google.com/spreadsheets/d/18pUk3eRy8YrR24MA9dO-PGjBhRTT3NQG/edit?usp=sharing&ouid=108604764774415117536&rtpof=true&sd=true) in the first sheet ("Exp_list"). The datetime of some of the data needs to be shifted to the given time periods given in the documents. To combine the n2014 and n2017 data for the weakly nudged runs it is recommended to use 01/2014-12/2017 from n2014 and 01/2018-12/2024 from n2017, to allow a year of spin-up. The variabels can represent instantaneous and accumulated values. A detailed overview about the specific variables is provided in [this guide](https://www.cen.uni-hamburg.de/en/icdc/data/atmosphere/docs-atmo/echam6-userguide.pdf).
 
 ## CESM2
 Q: 
 - what is the NUDGING TIME???
+- There is no data on a hourly timescale right?
 
 In summary, atmospheric grid-point nudging to ERA5 meridional and zonal winds was applied down to 700 hPa using a standard relaxation procedure at 3‑hourly intervals, while allowing the planetary boundary layer to evolve freely. In addition, sea surface temperatures were prescribed to observed and counterfactual values to ensure a physically plausible representation in the climate model. Counterfactual SSTs were estimated using a pattern filtering method [Wills et al. (2020)](https://doi.org/10.1175/JCLI-D-19-0855.1).
 
@@ -112,16 +113,16 @@ The simulations are created by the Institute of Coastal Systems, Helmholtz-Zentr
 |  | plus2K | boundary conditions from RCP8.5 with 2044-2053 average GHG concentrations (CO2: 553ppmv, CH4: 2411ppbv, N20: 357ppbv, CFC11: 142pptv, CFC12: 370pptv) | 2015‑2025 | 5 |
 
 #### Overview of the available variables:
-A variety of different atmospheric and ocean related variabels are saved at hourly timescales. A full overview of the available parameters is provided at ??. The labelling and description follows the official [GRIB ECMWF parameter database](https://codes.ecmwf.int/grib/param-db/).
+A variety of different atmospheric related variabels are saved at hourly timescales. A full overview of the available parameters is provided at ??. The labelling and description follows the official [GRIB ECMWF parameter database](https://codes.ecmwf.int/grib/param-db/).
 
 #### Access the data:
 A DKRZ account is mandatory to access the data. A detailed description of how to download the data is provided in the Jupyter Notebook: [XX](XX).
 
 ## IFS-FESOM
 Q:
-- Are there 5 Ensemble members? I saw this in the new draft but never checked in the files.
+- Are there 5 Ensemble members? I saw this in the new draft but never checked the actual files.
 - Is there a better document for the overview of the variables than the one I provided? Is this document even correct and up-to-date?
-- Would it be possible to provide some more information about how to download the data in the retriever Github? Especially about the different options what expver, generation, realisation, stream, etc. means and for example what the different options for the experiments, realisations are? For me at least it not clear yet how I could for example download the 3 ensemble member for the pre-industrial.
+- Would it be possible to provide some more information about how to download the data in the "retriever Github"? Especially some more information about the different options, like what expver, generation, realisation, stream, etc. means and for example what the different options for the experiments, realisations would be very helpful? For me at least it not clear yet how I could for example download the 3 ensemble member for the pre-industrial.
 
 
 In short, Newtonian relaxation spectral nudging to ERA5 is applied to vorticity and divergence between 100 and 700 hPa, with a sigmoidal transition. This allows the planetary boundary layer and air-sea-ice coupling to develop freely. A triangular truncation of T60 with a relatively short relaxation time timescale (e-folding time) of 1 hour is used for the nudging.
@@ -142,6 +143,7 @@ This simulations forms a core operational component of the EU’s Destination Ea
 more deteails about the simulations can be found here:
 
 <img width="871" height="308" alt="image" src="https://github.com/user-attachments/assets/3ed0bf0e-06c5-472e-8fa3-ba78b2ce4d59" />
+
 Source: [John et al. (2026)](https://doi.org/10.22541/essoar.173160166.64258929/v3)
 
 #### Overview of the available variables:
@@ -149,3 +151,6 @@ A variety of different atmospheric and ocean related variabels are saved at hour
 
 #### Access the data:
 To access the data it is mandatory to have an upgraded account at the [DestinE Platform](https://platform.destine.eu/support-pages/access-policy/). The data can be downloaded via the Destination Earth Polytope API as descriped in this [repository](https://github.com/John-Amal/retriever_polytop/tree/main).
+
+
+For any inquiries about the information displayed here, or if you have another nudged climate dataset you would like to add, please feel free to contact me, [Niklas Merz](mailto:niklas.merz@ufz.de).
