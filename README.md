@@ -1,7 +1,7 @@
 # Overview_nudgedClimateSimulations
 This repository provides an overview of available wind‑nudged climate model simulations. It includes general descriptions of the datasets, along with guidance on how to access and use the data.
 
-For any inquiries about the information displayed here, or if you have another nudged climate dataset you would like to add, please feel free to contact me, [Niklas Merz](mailto:niklas.merz@ufz.de).
+For any inquiries about the information displayed here, or if you have another nudged climate dataset you would like to add, please feel free to contact [Niklas Merz](mailto:niklas.merz@ufz.de).
 
 ## 🌟 General information about nudged climate storyline simulations
 
