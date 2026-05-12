@@ -71,7 +71,7 @@ A DKRZ account is mandatory to access the data. A full overview of the specific 
 
 ## CESM2
 Q: 
-- what is the NUDGING TIME???
+- What is the nudging time???
 - There is no data on a hourly timescale right?
 
 In summary, atmospheric grid-point nudging to ERA5 meridional and zonal winds was applied down to 700 hPa using a standard relaxation procedure at 3‑hourly intervals, while allowing the planetary boundary layer to evolve freely. In addition, sea surface temperatures were prescribed to observed and counterfactual values to ensure a physically plausible representation in the climate model. Counterfactual SSTs were estimated using a pattern filtering method [Wills et al. (2020)](https://doi.org/10.1175/JCLI-D-19-0855.1).
@@ -131,7 +131,7 @@ A DKRZ account is mandatory to access the data. A detailed description of how to
 
 ## IFS-FESOM
 Q:
-- Are there 5 Ensemble members? I saw this in the new draft but never checked the actual files.
+- Are there 5 ensemble members? I saw this in the new paper draft but never checked the actual files.
 - Is there a better document for the overview of the variables than the one I provided? Is this document even correct and up-to-date?
 - Would it be possible to provide some more information about how to download the data in the "retriever Github"? Especially some more information about the different options, like what expver, generation, realisation, stream, etc. means and for example what the different options for the experiments, realisations would be very helpful? For me at least it not clear yet how I could for example download the 3 ensemble member for the pre-industrial.
 - I proposed a file (IFS_FESOM_converter_reg_grid.py) to convert the .nc output from the retriever to a regular lat/lon grid, however this implementation is not super fast. Maybe there is a more native way to do this which I am not aware of or could this maybe be even be implemented at https://github.com/John-Amal/retriever_polytop? Because I guess most user would want to use a regular lat/lon grid.
