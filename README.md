@@ -1,6 +1,8 @@
 # Overview_nudgedClimateSimulations
 This repository provides an overview of available wind‑nudged climate model simulations. It includes general descriptions of the datasets, along with guidance on how to access and use the data.
 
+For any inquiries about the information displayed here, or if you have another nudged climate dataset you would like to add, please feel free to contact me, [Niklas Merz](mailto:niklas.merz@ufz.de).
+
 ## 🌟 General information about nudged climate storyline simulations
 
 Nudged model simulations refer to a class of climate experiments in which key aspects of the large-scale atmospheric circulation — most commonly winds — are constrained towards observational or reanalysis data during the simulation, while the model is otherwise free to generate its own small-scale processes and internal variability. This approach ensures consistency with the observed large-scale evolution while retaining a physically coherent representation of regional dynamics and feedbacks.
@@ -151,6 +153,3 @@ A variety of different atmospheric and ocean related variabels are saved at hour
 
 #### Access the data:
 To access the data it is mandatory to have an upgraded account at the [DestinE Platform](https://platform.destine.eu/support-pages/access-policy/). The data can be downloaded via the Destination Earth Polytope API as descriped in this [repository](https://github.com/John-Amal/retriever_polytop/tree/main).
-
-
-For any inquiries about the information displayed here, or if you have another nudged climate dataset you would like to add, please feel free to contact me, [Niklas Merz](mailto:niklas.merz@ufz.de).
