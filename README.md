@@ -77,7 +77,7 @@ Q:
 In summary, atmospheric grid-point nudging to ERA5 meridional and zonal winds was applied down to 700 hPa using a standard relaxation procedure at 3‑hourly intervals, while allowing the planetary boundary layer to evolve freely. In addition, sea surface temperatures were prescribed to observed and counterfactual values to ensure a physically plausible representation in the climate model. Counterfactual SSTs were estimated using a pattern filtering method [Wills et al. (2020)](https://doi.org/10.1175/JCLI-D-19-0855.1).
 
 #### Data ownership:
-The simulations are created by István Dunkl who is part of the research group of Prof. Sebastian Sippel at the University of Leipzig. Contact with the working group is mandatory before usage of the data. Contact persons are [István Dunkl](mailto:istvan.dunkl@uni-leipzig.de) or [Sebastian Sipple](mailto:sebastian.sippel@uni-leipzig.de).
+The simulations are created by István Dunkl who is part of the research group of Prof. Sebastian Sippel at the University of Leipzig. Contact with the working group is mandatory before usage of the data. Contact persons are [István Dunkl](mailto:istvan.dunkl@uni-leipzig.de) or [Sebastian Sippel](mailto:sebastian.sippel@uni-leipzig.de).
 
 #### Key literature:
 * [Pfleiderer et al. (2025)](https://doi.org/10.5194/wcd-7-89-2026)
